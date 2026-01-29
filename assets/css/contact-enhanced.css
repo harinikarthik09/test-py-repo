@@ -472,6 +472,86 @@
   animation: spin 1s linear infinite;
 }
 
+/* Quantity Selector Styling */
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 2px solid #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.quantity-selector:focus-within {
+  border-color: #ff511a;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(255, 81, 26, 0.2);
+}
+
+.qty-btn {
+  background-color: #ff511a;
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 45px;
+  height: 45px;
+}
+
+.qty-btn:hover:not(:disabled) {
+  background-color: #ff6633;
+  transform: scale(1.05);
+}
+
+.qty-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.qty-minus {
+  border-radius: 8px 0 0 8px;
+}
+
+.qty-plus {
+  border-radius: 0 8px 8px 0;
+}
+
+.qty-input {
+  flex: 1;
+  border: none !important;
+  background-color: transparent !important;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  padding: 0 15px !important;
+  min-width: 60px;
+  height: 45px;
+  box-shadow: none !important;
+}
+
+.qty-input:focus {
+  outline: none;
+}
+
+/* Remove spinner from number input */
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.qty-input[type=number] {
+  -moz-appearance: textfield;
+}
+
 /* Print Styles */
 @media print {
   .alert,
